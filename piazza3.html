@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Italia in piazza</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="container header-content">
+    <div class="logo" onclick="window.open('index.html','_self')">
+      <img class="logo-img" src="img/logo.png" alt="logo">
+      <h2>Italia in piazza</h2>
+    </div>
+    <nav class="nav">
+      <a href="listaPiazze.html">Lista piazze</a>
+      <a href="attivita.html">Attività</a>
+      <a href="informazioni.html">Informazioni</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" style="background: url('img/PzzArchimedeSR/archimede_2.jpg') center/cover">
+  <div class="hero-overlay">
+    <h1>Piazza Archimede</h1>
+    <h4>Siracusa</h4>
+  </div>
+</section>
+
+<section class="container">
+  <div class="section-header">
+    <h2> Presentazione</h2>
+  </div>
+
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img id="imgMostra" src="img/PzzArchimedeSR/archimede_1.jpg" alt="">
+    </div>
+  </div>
+
+
+  <div class="colonne">
+    <h4>
+      La Piazza Archimede è il cuore pulsante del centro storico di Siracusa, situata sull’isola di Ortigia. La piazza è dominata dalla fontana di Diana, un elegante esempio di scultura barocca che funge da punto focale, e circondata da edifici storici dai portici e dalle facciate decorate tipiche dell’architettura siciliana. Spazio di incontro per cittadini e turisti, Piazza Archimede unisce storia, arte e vita quotidiana, offrendo un ambiente suggestivo dove passeggiare, ammirare monumenti e godere dell’atmosfera vibrante dell’isola
+    </h4>
+    <table>
+      <tr>
+        <th>Quartiere</th>
+        <td>Ortigia</td>
+      </tr>
+      <tr>
+        <th>Costruzione</th>
+        <td>XVII Secolo</td>
+      </tr>
+      <tr>
+        <th>Metratura</th>
+        <td>40 x 60 metri</td>
+      </tr>
+      <tr>
+        <th>Forma</th>
+        <td>Poligonale</td>
+      </tr>
+      <tr>
+        <th>Tipologia</th>
+        <td>Piazza urbana storico</td>
+      </tr>
+    </table>
+  </div>
+
+
+  <div class="linea"></div>
+
+  <section class="attivita container">
+    <div class="attivita-text">
+      <h2 style="border: none">Fontana Di Diana</h2>
+      <h4>
+        La Fontana di Diana, situata al centro della Piazza Archimede, è
+        una elegante fontana barocca realizzata nel XVII secolo, intitolata alla
+        dea Diana, protettrice della città. La struttura è composta da un grande
+        bacino circolare in pietra bianca, al centro del quale si erge la statua di Diana
+        in posizione fiera e armoniosa, circondata da figure allegoriche e motivi decorativi
+        che richiamano l’acqua e la natura. La fontana funge da punto focale della piazza,
+        creando un equilibrio tra arte e spazio urbano, e rappresenta uno dei simboli più
+        riconoscibili di Ortigia, attirando visitatori per la sua eleganza e per l’atmosfera
+        scenografica che conferisce alla piazza.
+      </h4>
+    </div>
+    <div class="attivita-img">
+      <img class="imgMod" src="img/PzzArchimedeSR/archimede_4.jpg" alt="">
+    </div>
+  </section>
+
+  <div class="linea"></div>
+
+  <div class="section-header">
+    <h2>Galleria</h2>
+  </div>
+  <div class="cards">
+    <div class="card">
+      <img class="imgMod" src="img/PzzArchimedeSR/archimede_1.jpg" alt="piazza">
+    </div>
+
+    <div class="card">
+      <img class="imgMod" src="img/PzzArchimedeSR/archimede_3.jpg" alt="piazza">
+    </div>
+
+    <div class="card">
+      <img class="imgMod" src="img/PzzArchimedeSR/archimede_5.jpg" alt="piazza">
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-content">
+    <div class="footer-info">
+      <h3>Italia in piazza</h3>
+      <h4>E-mail: italiainpiazza@info.it</h4>
+      <h4>Recapito: +39 1239475942</h4>
+      <h4>Privacy</h4>
+      <h4>Informativa cookie</h4>
+    </div>
+    <div class="footer-social">
+      <div class="social">
+        <img onclick="window.open('https://www.instagram.com/')" src="img/icona 1.png"/>
+      </div>
+      <div class="social">
+        <img onclick="window.open('https://x.com/')" src="img/icona 2.png"/>
+      </div>
+      <div class="social">
+        <img onclick="window.open('https://bsky.app/')" src="img/icona 3.png" height="1096" width="1103"/>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var modal = document.getElementById("myModal");
+
+  var imgs = document.getElementsByClassName("imgMod");
+
+  var span = document.getElementsByClassName("close")[0];
+
+  for (var i = 0; i < imgs.length; i++) {
+    var vetImg = imgs[i];
+    vetImg.onclick = function() {
+      modal.style.display = "block";
+      document.getElementById("imgMostra").src = this.src;
+    }
+  }
+
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+
+</body>
+</html>

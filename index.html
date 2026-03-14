@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Italia in piazza</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="container header-content">
+    <div class="logo" onclick="window.open('index.html','_self')">
+      <img class="logo-img" src="img/logo.png" alt="logo">
+      <h2>Italia in piazza</h2>
+    </div>
+    <nav class="nav">
+      <a href="listaPiazze.html">Lista piazze</a>
+      <a href="attivita.html">Attività</a>
+      <a href="informazioni.html">Informazioni</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" style="background: url('./img/generali/PzzCT.jpg') center">
+  <div class="hero-overlay">
+    <h1>Italia in piazza</h1>
+    <h4>Mattonella dopo mattonella, fontana dopo fontana</h4>
+  </div>
+</section>
+
+<section class="container">
+  <div class="section-header">
+    <h2>Le Piazze</h2>
+    <button onclick="window.open('listaPiazze.html','_self')" class="btn">Mostra tutto</button>
+  </div>
+
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img id="imgMostra" src="img/PzzArchimedeSR/archimede_1.jpg" alt="">
+    </div>
+  </div>
+
+  <div class="piazza">
+    <div class="piazza-text">
+      <h3 onclick="window.open('piazza1.html','_self')">Piazza Duomo</h3>
+      <h4 class="city">Messina</h4>
+      <h4>Costruzione: XII secolo</h4>
+      <h4>Famosa per il celebre orologio astronomico e la rinascimentale fontana di Orione.</h4>
+    </div>
+    <div class="piazza-img">
+      <img class="imgMod" style="object-position: 0 85%" src="img/PzzDuomoME/duomo_1.jpg" alt="duomo_1">
+    </div>
+  </div>
+
+  <div class="piazza">
+    <div class="piazza-text">
+      <h3 onclick="window.open('piazza2.html','_self')">Piazza Roma</h3>
+      <h4 class="city">Catania</h4>
+      <h4>Costruzione: XIX secolo</h4>
+      <h4>Storico punto di ritrovo per i giovani che unisce giardino monumentale e piazza cittadina.</h4>
+    </div>
+    <div class="piazza-img">
+      <img class="imgMod" style="object-position: 0 20%" src="img/PzzRomaCT/roma_1.jpg" alt="roma_1">
+    </div>
+  </div>
+
+  <div class="piazza">
+    <div class="piazza-text">
+      <h3 onclick="window.open('piazza3.html','_self')">Piazza Archimede</h3>
+      <h4 class="city">Siracusa</h4>
+      <h4>Costruzione: XVI secolo</h4>
+      <h4>Caratterizzata dalla fontana di Diana, circondata da palazzi storici della Sicilia dal Medioevo ai giorni nostri.</h4>
+    </div>
+    <div class="piazza-img">
+      <img class="imgMod" style="object-position: 0 45%" src="img/PzzArchimedeSR/archimede_2.jpg" alt="archimede_2">
+    </div>
+  </div>
+
+</section>
+
+<section class="banner">
+  <img src="img/generali/PzzPA.jpg" alt="">
+</section>
+
+<section class="attivita container">
+  <div class="attivita-text">
+    <h2>Attività</h2>
+    <h4>Le piazze sono da sempre luogo di ritrovo, spazio comune in cui dilettarsi in molteplici attività:</h4>
+    <ul>
+      <li>Intrattenersi con gli amici</li>
+      <li>Partecipare al mercato</li>
+      <li>Osservare installazioni artistiche</li>
+    </ul>
+    <button onclick="window.open('attivita.html','_self')" class="btn">Mostra tutto</button>
+  </div>
+  <div class="attivita-img">
+    <img class="imgMod" src="img/generali/Att1.jpg" alt="">
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-content">
+    <div class="footer-info">
+      <h3>Italia in piazza</h3>
+      <h4>E-mail: italiainpiazza@info.it</h4>
+      <h4>Recapito: +39 1239475942</h4>
+      <h4>Privacy</h4>
+      <h4>Informativa cookie</h4>
+    </div>
+    <div class="footer-social">
+      <div class="social">
+        <img onclick="window.open('https://www.instagram.com/')" src="img/icona 1.png"/>
+      </div>
+      <div class="social">
+        <img onclick="window.open('https://x.com/')" src="img/icona 2.png"/>
+      </div>
+      <div class="social">
+        <img onclick="window.open('https://bsky.app/')" src="img/icona 3.png" height="1096" width="1103"/>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var modal = document.getElementById("myModal");
+
+  var imgs = document.getElementsByClassName("imgMod");
+
+  var span = document.getElementsByClassName("close")[0];
+
+  for (var i = 0; i < imgs.length; i++) {
+    var vetImg = imgs[i];
+    vetImg.onclick = function() {
+      modal.style.display = "block";
+      document.getElementById("imgMostra").src = this.src;
+    }
+  }
+
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+
+</body>
+</html>
