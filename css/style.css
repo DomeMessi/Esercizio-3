@@ -270,6 +270,64 @@ h4 {
   cursor: pointer;
 }
 
+.search-container {
+  color: #414445;
+  display: flex;
+}
+
+.search-container form {
+  display: flex;
+  width: 100%;
+}
+
+.search-container select {
+  padding: 10px;
+  background: rgb(209, 238, 158);
+  font-size: 16px;
+  color: #414445;
+  border: none;
+  border-right: 3px solid #9aac22;
+  cursor: pointer;
+}
+
+.search-container input[type=text] {
+  flex: 1;
+  min-width: 0;
+  padding: 10px;
+  margin-left: -4px;
+  font-size: 16px;
+  border: none;
+  font-family: fontTxtPar ;
+  color: #414445;
+  background-color: #eff4e6;
+}
+
+.search-container button {
+  transition: all .2s ease;
+  -webkit-transition: all .2s ease;
+  float: right;
+  padding: 5px;
+  border: none;
+  border-left: 3px solid #9aac22;
+  background: rgb(209, 238, 158);
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.search-container button:hover {
+  transition: all .2s ease;
+  -webkit-transition: all .2s ease;
+  background: rgba(209, 238, 158, 0.77);
+}
+
+.search-container img{
+  width: 30px;
+  height: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Add Animation */
 @-webkit-keyframes animatetop {
   from {top:-300px; opacity:0}
@@ -446,12 +504,11 @@ td, th {
   .section-header {
     gap: 15px;
     align-items: flex-start;
+    flex-direction: column;
   }
 
   .section-header h2 {
-    border-bottom: 3px solid #8ab347;
-    padding-bottom: 8px;
-    padding-right: 40%;
+    padding-right: 20%;
   }
 
   .nav {
@@ -488,4 +545,5 @@ td, th {
   table{
     max-width: 100%;
   }
+
 }
