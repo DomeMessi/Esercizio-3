@@ -26,6 +26,19 @@
 <section class="container">
   <div class="section-header">
     <h2>Lista Piazze</h2>
+    <div class="search-container">
+      <form action="/action_page.php">
+        <select>
+          <option value="Alfabetico A-Z">Alfabetico A-Z</option>
+          <option value="Alfabetico Z-A">Alfabetico Z-A</option>
+          <option value="Metratura">Metratura</option>
+        </select>
+        <input type="text" placeholder="CAP, Targa, Capoluogo..." name="search">
+        <button type="submit">
+          <img src="img/Lente.png" alt="">
+        </button>
+      </form>
+    </div>
   </div>
 
   <div id="myModal" class="modal">
