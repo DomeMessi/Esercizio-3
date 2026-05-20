@@ -47,13 +47,16 @@ h3 {
   font-family: fontTxtParBold;
   font-size: 24px;
   font-weight: normal;
+  padding-bottom: 10px;
 }
 
 
 h4 {
   font-family: fontTxtPar;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: normal;
+  line-height: 22px;
+  text-wrap: balance;
 }
 
 .header {
@@ -110,6 +113,11 @@ h4 {
 }
 
 .nav a:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.nav #selezionato{
   text-decoration: underline;
   text-underline-offset: 5px;
 }
@@ -222,7 +230,7 @@ h4 {
   display: none;
   position: fixed;
   z-index: 1;
-  padding-top: 100px;
+  padding-top: 5vh;
   left: 0;
   top: 0;
   width: 100%;
@@ -237,11 +245,11 @@ h4 {
   flex-direction: column;
   position: relative;
   padding: 10px 10px 0 10px;
-  width: 80vw;
-  height: 70vw;
   max-width: 1200px;
   max-height: 800px;
   margin: auto;
+  width: 60vw;
+  height: 80vh;
   -webkit-animation-name: animatetop;
   -webkit-animation-duration: 0.4s;
   animation-name: animatetop;
@@ -268,6 +276,64 @@ h4 {
 .close:focus {
   color: #9aac22;
   cursor: pointer;
+}
+
+.search-container {
+  color: #414445;
+  display: flex;
+}
+
+.search-container form {
+  display: flex;
+  width: 100%;
+}
+
+.search-container select {
+  padding: 10px;
+  background: rgb(209, 238, 158);
+  font-size: 16px;
+  color: #414445;
+  border: none;
+  border-right: 3px solid #9aac22;
+  cursor: pointer;
+}
+
+.search-container input[type=text] {
+  flex: 1;
+  min-width: 0;
+  padding: 10px;
+  margin-left: -4px;
+  font-size: 16px;
+  border: none;
+  font-family: fontTxtPar ;
+  color: #414445;
+  background-color: #eff4e6;
+}
+
+.search-container button {
+  transition: all .2s ease;
+  -webkit-transition: all .2s ease;
+  float: right;
+  padding: 5px;
+  border: none;
+  border-left: 3px solid #9aac22;
+  background: rgb(209, 238, 158);
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.search-container button:hover {
+  transition: all .2s ease;
+  -webkit-transition: all .2s ease;
+  background: rgba(209, 238, 158, 0.77);
+}
+
+.search-container img{
+  width: 30px;
+  height: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Add Animation */
@@ -308,6 +374,7 @@ h4 {
 
 .attivita-text ul {
   margin: 20px 0 20px 20px;
+  line-height: 2;
 }
 
 .attivita-img {
@@ -371,12 +438,9 @@ h4 {
 }
 
 .colonne{
-  display:flex;
+  display:grid;
   gap:40px;
-}
-
-.colonne h4{
-  flex:1;
+  grid-template-columns: 2fr 1fr;
 }
 
 .cards{
@@ -446,12 +510,11 @@ td, th {
   .section-header {
     gap: 15px;
     align-items: flex-start;
+    flex-direction: column;
   }
 
   .section-header h2 {
-    border-bottom: 3px solid #8ab347;
-    padding-bottom: 8px;
-    padding-right: 40%;
+    padding-right: 20%;
   }
 
   .nav {
@@ -488,4 +551,5 @@ td, th {
   table{
     max-width: 100%;
   }
+
 }

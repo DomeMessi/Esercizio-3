@@ -16,7 +16,7 @@
       <h2>Italia in piazza</h2>
     </div>
     <nav class="nav">
-      <a href="listaPiazze.html">Lista piazze</a>
+      <a id="selezionato" href="listaPiazze.html">Lista piazze</a>
       <a href="attivita.html">Attività</a>
       <a href="informazioni.html">Informazioni</a>
     </nav>
@@ -26,6 +26,19 @@
 <section class="container">
   <div class="section-header">
     <h2>Lista Piazze</h2>
+    <div class="search-container">
+      <form action="/action_page.php">
+        <select>
+          <option value="Alfabetico A-Z">Alfabetico A-Z</option>
+          <option value="Alfabetico Z-A">Alfabetico Z-A</option>
+          <option value="Metratura">Metratura</option>
+        </select>
+        <input type="text" placeholder="CAP, Targa, Capoluogo..." name="search">
+        <button type="submit">
+          <img src="img/Lente.png" alt="">
+        </button>
+      </form>
+    </div>
   </div>
 
   <div id="myModal" class="modal">
@@ -42,8 +55,8 @@
       <h4>Costruzione: XII secolo</h4>
       <h4>Famosa per il celebre orologio astronomico e la rinascimentale fontana di Orione.</h4>
     </div>
-    <div class="piazza-img">
-      <img class="imgMod" style="object-position: 0 85%" src="img/listaPiazze/lstPzz5.jpg" alt="duomo_1">
+    <div class="piazza-img" onclick="window.open('piazza1.html','_self')">
+      <img  style="object-position: 0 85%" src="img/listaPiazze/lstPzz5.jpg" alt="duomo_1">
     </div>
   </div>
 
@@ -54,8 +67,8 @@
       <h4>Costruzione: XIX secolo</h4>
       <h4>Storico punto di ritrovo per i giovani che unisce giardino monumentale e piazza cittadina.</h4>
     </div>
-    <div class="piazza-img">
-      <img class="imgMod" style="object-position: 0 20%" src="img/listaPiazze/lstPzz3.jpg" alt="roma_1">
+    <div class="piazza-img" onclick="window.open('piazza2.html','_self')">
+      <img  style="object-position: 0 20%" src="img/listaPiazze/lstPzz3.jpg" alt="roma_1">
     </div>
   </div>
 
@@ -66,8 +79,8 @@
       <h4>Costruzione: XVI secolo</h4>
       <h4>Caratterizzata dalla fontana di Diana, circondata da palazzi storici della Sicilia dal Medioevo ai giorni nostri.</h4>
     </div>
-    <div class="piazza-img">
-      <img class="imgMod" style="object-position: 0 45%" src="img/listaPiazze/lstPzz8.jpg" alt="archimede_2">
+    <div class="piazza-img" onclick="window.open('piazza3.html','_self')">
+      <img  style="object-position: 0 45%" src="img/listaPiazze/lstPzz8.jpg" alt="archimede_2">
     </div>
   </div>
 
@@ -79,7 +92,7 @@
       <h4>Dedicata al personaggio più illustre della Città e circondata da importanti edifici storici</h4>
     </div>
     <div class="piazza-img">
-      <img class="imgMod" style="object-position: 0 97%" src="img/listaPiazze/lstPzz1.jpg" alt="duomo_1">
+      <img  style="object-position: 0 97%" src="img/listaPiazze/lstPzz1.jpg" alt="duomo_1">
     </div>
   </div>
 
@@ -91,7 +104,7 @@
       <h4>Piazza inizialmente dedicata al Re Ferdinando II, famosa per la sua statua in bronzo della Fontana del Tritone</h4>
     </div>
     <div class="piazza-img">
-      <img class="imgMod" style="object-position: 0 30%" src="img/listaPiazze/lstPzz2.jpg" alt="duomo_1">
+      <img  style="object-position: 0 30%" src="img/listaPiazze/lstPzz2.jpg" alt="duomo_1">
     </div>
   </div>
 
@@ -103,7 +116,7 @@
       <h4>Da secoli centro cittadino palcoscenico di rivoluzioni, politica e fiere, tutt'ora luogo di comune incontro per la popolazione</h4>
     </div>
     <div class="piazza-img">
-      <img class="imgMod" style="object-position: 0 60%" src="img/listaPiazze/lstPzz4.jpg" alt="duomo_1">
+      <img  style="object-position: 0 60%" src="img/listaPiazze/lstPzz4.jpg" alt="duomo_1">
     </div>
   </div>
 
@@ -115,7 +128,7 @@
       <h4>Famossisima per l'enorme fontana della vergogna che ne occupa gran parte della superfice, grande gioiello dell'epoca rinascimentale</h4>
     </div>
     <div class="piazza-img">
-      <img class="imgMod" style="object-position: 0 75%" src="img/listaPiazze/lstPzz6.jpg" alt="duomo_1">
+      <img  style="object-position: 0 75%" src="img/listaPiazze/lstPzz6.jpg" alt="duomo_1">
     </div>
   </div>
 
@@ -127,7 +140,7 @@
       <h4>Ineguagliabile struttura a palcoscenico dedita a valorizzare la splendida chiesa posta sul lato superirore della piazza</h4>
     </div>
     <div class="piazza-img">
-      <img class="imgMod" style="object-position: 0 50%" src="img/listaPiazze/lstPzz7.jpg" alt="duomo_1">
+      <img  style="object-position: 0 50%" src="img/listaPiazze/lstPzz7.jpg" alt="duomo_1">
     </div>
   </div>
 
@@ -139,7 +152,7 @@
       <h4>Importante valore storico e architettonico, maestosi portici che un tempo ospitavano il mercato della città</h4>
     </div>
     <div class="piazza-img">
-      <img class="imgMod" style="object-position: 0 50%" src="img/listaPiazze/lstPzz9.jpg" alt="duomo_1">
+      <img  style="object-position: 0 50%" src="img/listaPiazze/lstPzz9.jpg" alt="duomo_1">
     </div>
   </div>
 
@@ -167,32 +180,6 @@
     </div>
   </div>
 </footer>
-
-<script>
-  var modal = document.getElementById("myModal");
-
-  var imgs = document.getElementsByClassName("imgMod");
-
-  var span = document.getElementsByClassName("close")[0];
-
-  for (var i = 0; i < imgs.length; i++) {
-    var vetImg = imgs[i];
-    vetImg.onclick = function() {
-      modal.style.display = "block";
-      document.getElementById("imgMostra").src = this.src;
-    }
-  }
-
-  span.onclick = function() {
-    modal.style.display = "none";
-  }
-
-  window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  }
-</script>
 
 </body>
 </html>
